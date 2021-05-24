@@ -1,14 +1,14 @@
 import { useState } from "react";
 import Logo from "./Logo";
-import Hamburger from './icons/Hamburger'
-import Close from './icons/Close'
-import NavLinks from './NavLinks'
+import Hamburger from "./icons/Hamburger"
+import Close from "./icons/Close"
+import NavLinks from "./NavLinks"
 import "./styles/navbar.css";
 
 export default function Navbar() {
-  // State for mobile menu
+  // Open/Close state for mobile nav links
   const [isOpen, setOpen] = useState(false);
-  // Toggle open/close for mobile menu
+  // Toggle open/close
   const expand = () => {
     setOpen((prevState) => !prevState);
   };
@@ -18,17 +18,17 @@ export default function Navbar() {
       <nav className="navBar">
         <Logo />
         <div className="navBtnLyt">
-        {/* Mobile Display - Toggle Menu */}
+          {/* Change icons on menu open/close */}
           {!isOpen ? (
             <Hamburger expand={expand} />
           ) : (
             <Close expand={expand} />
           )}
         </div>
-        {/* Web Display */}
+        {/* Desktop nav links */}
         <NavLinks view="desktop"/>
       </nav>
-      {/* Mobile menu toggleable list */}
+      {/* Mobile nav links */}
       {isOpen ? (
         <NavLinks view="mobile"/>
       ) : null}

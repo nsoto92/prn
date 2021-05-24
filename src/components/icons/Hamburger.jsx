@@ -1,4 +1,4 @@
-import '../styles/icon.css'
+import "../styles/icon.css"
 
 export default function Hamburger(props) {
     return (
