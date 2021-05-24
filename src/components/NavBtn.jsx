@@ -4,7 +4,7 @@ export default function NavBtn(props) {
     // Add '/' before links other than home
     const pathFormat = () => props.link[0] !== '/' ? '/' + props.link : props.link
     return (
-        <a className="navLinks" href={props.link}>
+        <a className="links" href={props.link}>
             <p 
             className= "navBtns">
             {props.title}

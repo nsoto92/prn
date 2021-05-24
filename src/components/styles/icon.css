@@ -1,0 +1,10 @@
+.icon {
+    width: 24px;
+    height: 24px;
+    color: #666666;
+  }
+@media (min-width: 769px) {
+    .icon {
+        display: none;
+    }
+}
