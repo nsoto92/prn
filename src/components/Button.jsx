@@ -1,9 +1,7 @@
-import React from 'react'
+import './styles/button.css'
 
-export default function Button() {
+export default function Button(props) {
     return (
-        <div>
-            
-        </div>
+        <button className="button">{props.label}</button>
     )
 }

@@ -1,0 +1,9 @@
+  /* Remove blue highlight on anchor tag clicks */
+* {        
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.App {
+  text-align: center;
+  font-family: 'Mulish', sans-serif;
+}

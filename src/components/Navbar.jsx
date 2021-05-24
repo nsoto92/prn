@@ -1,23 +1,19 @@
-import React, { useState } from "react";
+import { useState, useContext } from "react";
+import { NavContext } from "../NavContext";
+import NavBtn from "./NavBtn";
+import Button from "./Button";
 import Logo from "./Logo";
-import "../styles/navbar.css";
+import "./styles/navbar.css";
 
 export default function Navbar() {
-  const paths = [
-    "Home",
-    "Patients",
-    "Caregivers",
-    "Nurses",
-    "Healthcare Providers",
-    "About",
-    "Contact",
-  ];
+  const { paths, values } = useContext(NavContext);
   // State for mobile menu
   const [isOpen, setOpen] = useState(false);
   // Toggle open/close for mobile menu
   const expand = () => {
     setOpen((prevState) => !prevState);
   };
+
   return (
     <>
       <nav className="navBar">
@@ -37,16 +33,13 @@ export default function Navbar() {
           <h1>YO</h1>
         </div>
       </nav>
+      {/* Mobile menu toggleable list */}
       {isOpen ? (
         <div className="mobileNav">
           {paths.map((p, i) => {
-            return (
-              <p className="navBtns" key={i}>
-                {p}
-              </p>
-            );
+            return <NavBtn key={i} title={p} link={values[i]} />;
           })}
-          <button className="button">Sign Up / Log In</button>
+          <Button label="Sign Up / Log In" />
         </div>
       ) : null}
     </>

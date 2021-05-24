@@ -1,0 +1,17 @@
+.navLinks {
+    outline: none;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 900;
+}
+
+.currentPage {
+    margin: -13px 0 13px 2px;
+    width: 60px;
+    border: 2px solid #BA2063; 
+}
+
+.navBtns {
+    margin: 0 0 15px 0;
+    text-decoration: none;
+}
